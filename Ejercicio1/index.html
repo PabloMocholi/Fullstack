@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Ejercicio 1</title>
+    <style>
+        :root {
+            font-family: 'Lexend', sans-serif;
+            color: white
+        }
+
+        #body {
+            background-image: url(fondo.avif);
+            background-size: cover;
+        }
+
+        .nombre {
+
+            font-weight: 900;
+            font-size: 300%;
+            margin: 0;
+        }
+
+        .netflix {
+            width: 200px;
+            height: 60px;
+            margin: 5px 5px 5px 10px;
+        }
+
+        .Info {
+            position: fixed;
+            right: 20%;
+            top: 20%;
+            border: 1px solid white;
+            height: 500px;
+            overflow: auto;
+            padding: 20px;
+            scrollbar-color: red orange;
+        }
+
+        .Info-tit {
+            font-weight: 400;
+            font-size: 210%;
+         
+        }
+
+        .Info-tit:hover {
+            color: greenyellow;
+            cursor: pointer;
+        }
+
+
+        .Info-display {
+            font-size: 150%;
+            display: flex;
+            align-items: center;
+            font-weight: 100;
+            margin: 20px 0px 30px 30px;
+
+
+        }
+
+        .u-centrar {
+            position: fixed;
+            left: 10%;
+            top: 40%;
+
+        }
+
+        .show {
+            height: 0px;
+            transition: height 0.4s;
+            overflow: hidden;
+        }
+
+        .show.active {
+            height: 110px;
+
+        }
+
+    
+    </style>
+</head>
+
+<body id="body">
+
+    <main>
+        <div class="u-centrar">
+            <h1 class="nombre">Pablo Fernández</h1>
+            <span>20 años</span><br>
+            <span>Andorra</span>
+        </div>
+
+
+
+        <section class="Info">
+            <div>
+                <span class="Info-tit" onclick="mostrarOcultar(1)">¿Qué le gusta?</span>
+                <div id="info1" class="Info-display show">
+                    <span> Planes de </span>
+                    <img src="netflix.png" alt="netflix" class="netflix">
+                    <span> y mantinta</span>
+                    <span style="font-size: 70%; margin-left: 20px; "> (planes caseros)</span>
+                </div>
+            </div>
+            <div>
+                <span class="Info-tit" onclick="mostrarOcultar(2)">¿Qué le gustaría?</span>
+                <div id="info2" class="Info-display show">
+                    <span> Viajar a Australia y a Sudamérica</span>
+
+                </div>
+            </div>
+            </div>
+            <div>
+                <span class="Info-tit" onclick="mostrarOcultar(3)">¿Por qué eligió estudiar programación?</span>
+                <div id="info3" class="Info-display show">
+                    <span> porque le llamaba la atención</span>
+
+                </div>
+            </div>
+            <div>
+                <span class="Info-tit" onclick="mostrarOcultar(4)">Lo mejor de la programación es...</span>
+                <div id="info4" class="Info-display show">
+                    <span> Ver cómo su contenido toma forma</span>
+
+                </div>
+            </div>
+
+
+
+        </section>
+
+
+    </main>
+
+</body>
+
+<script>
+    const info1 = document.getElementById("info1");
+    const info2 = document.getElementById("info2");
+    const info3 = document.getElementById("info3");
+    const info4 = document.getElementById("info4");
+
+    function mostrarOcultar(num) {
+        if (num == 1)
+            info1.classList.toggle("active");
+        if (num == 2)
+            info2.classList.toggle("active");
+        if (num == 3)
+            info3.classList.toggle("active");
+        if (num == 4)
+            info4.classList.toggle("active");
+
+    }
+
+</script>
+
+</html>
