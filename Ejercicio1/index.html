@@ -34,20 +34,18 @@
         }
 
         .Info {
-            position: fixed;
-            right: 20%;
-            top: 20%;
-            border: 1px solid white;
+            width: 50%;
+
             height: 500px;
             overflow: auto;
             padding: 20px;
-            scrollbar-color: red orange;
+            scrollbar-color: greenyellow black;
         }
 
         .Info-tit {
             font-weight: 400;
             font-size: 210%;
-         
+
         }
 
         .Info-tit:hover {
@@ -66,11 +64,51 @@
 
         }
 
+        .Nav {
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 30px;
+            background-color: black;
+        }
+
+        .Nav-activo {
+            background-color: greenyellow;
+            border-radius: 30px;
+            padding: 10px;
+            color: black;
+            margin-right: 15px;
+        }
+
         .u-centrar {
             position: fixed;
             left: 10%;
             top: 40%;
 
+        }
+
+        .u-centrarBajo {
+            position: fixed;
+            left: 50%;
+            bottom: 2%;
+            transform: translate(-50%);
+
+        }
+
+        .u-centrarTop {
+            position: fixed;
+            left: 50%;
+            top: -16%;
+            transform: translate(-50%);
+            transition: top 0.5s
+
+        }
+
+        .u-centrarTop.active {
+            top: 2%;
+        }
+
+        .u-green {
+            color: greenyellow;
         }
 
         .show {
@@ -83,25 +121,20 @@
             height: 110px;
 
         }
-
-    
     </style>
 </head>
 
 <body id="body">
 
-    <main>
-        <div class="u-centrar">
+    <main style="display: flex; align-items: center; height: 95vh;">
+        <div style="width: 50%; margin-left: 50px;">
             <h1 class="nombre">Pablo Fernández</h1>
-            <span>20 años</span><br>
-            <span>Andorra</span>
+            <span>20 años - Andorra</span><br>
         </div>
-
-
 
         <section class="Info">
             <div>
-                <span class="Info-tit" onclick="mostrarOcultar(1)">¿Qué le gusta?</span>
+                <span class="Info-tit" onclick="mostrarOcultar(1)" id="tit1">¿Qué le gusta?</span>
                 <div id="info1" class="Info-display show">
                     <span> Planes de </span>
                     <img src="netflix.png" alt="netflix" class="netflix">
@@ -110,7 +143,7 @@
                 </div>
             </div>
             <div>
-                <span class="Info-tit" onclick="mostrarOcultar(2)">¿Qué le gustaría?</span>
+                <span class="Info-tit" onclick="mostrarOcultar(2)" id="tit2">¿Qué le gustaría?</span>
                 <div id="info2" class="Info-display show">
                     <span> Viajar a Australia y a Sudamérica</span>
 
@@ -118,45 +151,92 @@
             </div>
             </div>
             <div>
-                <span class="Info-tit" onclick="mostrarOcultar(3)">¿Por qué eligió estudiar programación?</span>
+                <span class="Info-tit" onclick="mostrarOcultar(5)" id="tit5">¿A qué se dedica?</span>
+                <div id="info5" class="Info-display show">
+                    <span> Es entrenador de fútbol</span>
+
+                </div>
+            </div>
+            <div>
+                <span class="Info-tit" onclick="mostrarOcultar(3)" id="tit3">¿Por qué eligió estudiar
+                    programación?</span>
                 <div id="info3" class="Info-display show">
                     <span> porque le llamaba la atención</span>
 
                 </div>
             </div>
             <div>
-                <span class="Info-tit" onclick="mostrarOcultar(4)">Lo mejor de la programación es...</span>
+                <span class="Info-tit" onclick="mostrarOcultar(4)" id="tit4">Lo mejor de la programación es...</span>
                 <div id="info4" class="Info-display show">
                     <span> Ver cómo su contenido toma forma</span>
 
                 </div>
             </div>
 
-
-
         </section>
 
+        <nav class="u-centrarBajo Nav" onclick="Alerta()">
+            <span class="Nav-activo">Conócome</span>
+            <span>Galería</span>
+        </nav>
+
+        <div id="alerta" class="u-centrarTop"
+            style=" background-color: black; color: greenyellow; padding: 30px; font-size: 150%; cursor: pointer;" >
+            <span>Uppps! parece que esto aún no está disponible :(</span>
+
+        </div>
 
     </main>
 
 </body>
 
 <script>
+    const tit1 = document.getElementById("tit1");
+    const tit2 = document.getElementById("tit2");
+    const tit3 = document.getElementById("tit3");
+    const tit4 = document.getElementById("tit4");
+    const tit5 = document.getElementById("tit5");
+
     const info1 = document.getElementById("info1");
     const info2 = document.getElementById("info2");
     const info3 = document.getElementById("info3");
     const info4 = document.getElementById("info4");
+    const info5 = document.getElementById("info5");
+
+    const alerta = document.getElementById("alerta");
 
     function mostrarOcultar(num) {
-        if (num == 1)
+        if (num == 1) {
             info1.classList.toggle("active");
-        if (num == 2)
-            info2.classList.toggle("active");
-        if (num == 3)
-            info3.classList.toggle("active");
-        if (num == 4)
-            info4.classList.toggle("active");
+            tit1.classList.toggle("u-green");
+        }
 
+        if (num == 2) {
+            info2.classList.toggle("active");
+            tit2.classList.toggle("u-green");
+        }
+
+        if (num == 3) {
+            info3.classList.toggle("active");
+            tit3.classList.toggle("u-green");
+        }
+
+        if (num == 4) {
+
+            info4.classList.toggle("active");
+            tit4.classList.toggle("u-green");
+        }
+        if (num == 5) {
+
+            info5.classList.toggle("active");
+            tit5.classList.toggle("u-green");
+        }
+
+    }
+
+    function Alerta() {
+        alerta.classList.toggle("active");
+        
     }
 
 </script>
