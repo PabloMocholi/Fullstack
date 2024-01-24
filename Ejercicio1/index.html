@@ -20,6 +20,12 @@
             background-size: cover;
         }
 
+        #main {
+            display: flex;
+            align-items: center;
+            height: 95vh;
+        }
+
         .nombre {
 
             font-weight: 900;
@@ -79,6 +85,14 @@
             margin-right: 15px;
         }
 
+        .Alerta {
+            background-color: black;
+            color: greenyellow;
+            padding: 30px;
+            font-size: 150%;
+            cursor: pointer;
+        }
+
         .u-centrar {
             position: fixed;
             left: 10%;
@@ -100,7 +114,6 @@
             top: -16%;
             transform: translate(-50%);
             transition: top 0.5s
-
         }
 
         .u-centrarTop.active {
@@ -126,7 +139,7 @@
 
 <body id="body">
 
-    <main style="display: flex; align-items: center; height: 95vh;">
+    <main id="main">
         <div style="width: 50%; margin-left: 50px;">
             <h1 class="nombre">Pablo Fernández</h1>
             <span>20 años - Andorra</span><br>
@@ -177,11 +190,10 @@
 
         <nav class="u-centrarBajo Nav" onclick="Alerta()">
             <span class="Nav-activo">Conócome</span>
-            <span>Galería</span>
+            <span style="cursor: pointer;">Galería</span>
         </nav>
 
-        <div id="alerta" class="u-centrarTop"
-            style=" background-color: black; color: greenyellow; padding: 30px; font-size: 150%; cursor: pointer;" >
+        <div id="alerta" class="u-centrarTop Alerta">
             <span>Uppps! parece que esto aún no está disponible :(</span>
 
         </div>
@@ -236,7 +248,7 @@
 
     function Alerta() {
         alerta.classList.toggle("active");
-        
+
     }
 
 </script>
