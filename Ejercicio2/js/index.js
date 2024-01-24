@@ -72,8 +72,8 @@ function buscarObraFecha() {
 function buscarObraEpoca() {
     const fecha = document.getElementById('epoca').value;
 
-  
-    const encontrado =  ArtGallery.every(a => {
+
+    const encontrado = ArtGallery.every(a => {
         console.log(a.year)
         return a.year > Number(fecha) //si quito el return falla
     })
@@ -84,8 +84,79 @@ function buscarObraEpoca() {
     else
         console.log(`Algunas obras son anteriores a ${fecha}`)
 
-    return encontrado
+
 }
+
+//--------------
+
+function buscarObraPosicion() {
+    const obra = document.getElementById('posicion').value;
+
+    const encontrado = ArtGallery.findIndex(a => {
+        //console.log(a.title)
+        return a.title == obra
+    })
+
+
+    if (encontrado != -1)
+        console.log(`Tu obra: ${obra}, se encuentra en la posición ${encontrado}`)
+    else
+        console.log(`No se ha encontrado esa obra`)
+
+}
+
+//--------------
+
+function anaydirObra() {
+    const artista = document.getElementById('artista').value;
+    const tit = document.getElementById('tituloObra').value;
+    const anyo = document.getElementById('anyo').value;
+    const mostrar = document.getElementById('mostrado').checked;
+
+    const newId = ArtGallery.length+1;
+
+    const NuevoObejto = {
+        id: newId,
+        artist: artista,
+        title: tit,
+        year: anyo,
+        isExhibited: mostrar
+    }
+
+    ArtGallery.push(NuevoObejto);
+    console.log(ArtGallery);
+
+}
+
+
+//--------------
+function getObra() {
+    const obra = document.getElementById('titulo').value;
+    buscarObra(obra);
+}
+
+function actualizar() {
+
+    const ident = document.getElementById('ident').value;
+    const encontrado = ArtGallery.find((a) => a.id == ident);
+    console.log(encontrado)
+
+    if(encontrado){
+
+        if( ArtGallery[encontrado.id-1].isExhibited)
+            ArtGallery[encontrado.id-1].isExhibited = false ;
+        else
+            ArtGallery[encontrado.id-1].isExhibited = true;
+       
+    }else{
+        console.log("No existe ese identificador")
+    }
+   
+
+}
+
+
+
 
 
 

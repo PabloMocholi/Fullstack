@@ -12,14 +12,44 @@
     <button onclick="usarMap()">Map</button>
     <button onclick="usarFilter()">Filter</button>
     <br>
+
     <input type="text" id="titulo" name="titulo" placeholder="Título de obra">
     <button onclick="getObra()">Buscar Obra por título</button>
+
     <br>
+
     <input type="number" id="fecha" name="fecha" placeholder="Fecha de la obra">
     <button onclick="buscarObraFecha()">Buscar Obra por fecha</button>
+
     <br>
+
     <input type="number" id="epoca" name="epoca" placeholder="Fecha de etapa la obra">
     <button onclick="buscarObraEpoca()">Buscar Obra por epoca</button>
+
+    <br>
+
+    <input type="text" id="posicion" name="posicion" placeholder="Nombre para localizar la obra">
+    <button onclick="buscarObraPosicion()">Buscar posición de la obra</button>
+
+    <br>
+    <br>
+
+
+    <input type="text" id="artista" name="artista" placeholder="Nombre del artista">
+    <input type="text" id="tituloObra" name="tituloObra" placeholder="Nombre de la obra">
+    <input type="number" id="anyo" name="anyo" placeholder="Año de publicación">
+    <input type="checkbox" id="mostrado" name="mostrado" >
+    <label for="mostrado">¿Mostrado?</label>
+    <button onclick="anaydirObra()">Añadir obra</button>
+
+    <br><br>
+
+    <input type="number" id="ident" name="ident" placeholder="Id de la obra">
+    <button onclick="actualizar()">Actualiza estado</button>
+
+    
+
+
     
 </body>
 </html>
