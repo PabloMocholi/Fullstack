@@ -41,17 +41,38 @@ controles.forEach(function(control,indice){
 
 const divLista = document.getElementById("listaC");
 let listaColores = [];
+let totalColors = 0;
 
 
 function guardarColor(){
-    listaColores.push(codigoColor.textContent);
 
-   divLista.innerHTML += `<div style="display:flex;cursor:pointer; gap:5px" onclick="setColor('${codigoColor.textContent}')">
-    <span style="flex-grow:1">${codigoColor.textContent}</span>
-    <div style="width:20px; height:20px;border-radius: 20px; background-color:${codigoColor.textContent} "></div>
-   </div>`
+    if(listaColores.length < 9){
+        newColor()
+     
+    }else{
+        listaColores.shift()
+        let borrar = document.getElementById("listaC").firstChild
+        borrar.remove()
+        newColor()
 
+    }
+   
    console.log(listaColores)
+}
+
+function newColor(){
+    totalColors++;
+
+    listaColores.push({
+        id:totalColors,
+        color:codigoColor.textContent
+    });
+
+
+    divLista.innerHTML += `<div id="${totalColors}" style="display:flex; gap:5px">
+     <span onclick="eliminarElemento(${totalColors})" style="flex-grow:1">${codigoColor.textContent}</span>
+     <div  onclick="setColor('${codigoColor.textContent}')" style="width:20px;cursor:pointer; height:20px;border-radius: 20px; background-color:${codigoColor.textContent} "></div>
+    </div>`
 }
 
 function setColor(color){
@@ -85,8 +106,20 @@ function borrarTodo(){
     while(listaColores.length >0)
         listaColores.pop()
 
-    divLista.innerHTML = ` <span>Lista de colores </span>`
+    divLista.innerHTML = ''
     //console.log(listaColores)
+
+}
+
+function eliminarElemento(idElemento){
+
+    const borrar = document.getElementById(idElemento);
+    borrar.remove();
+
+   const pos = listaColores.findIndex(color => color.id == idElemento)
+   listaColores.splice(pos,1);
+
+   console.log(listaColores)
 
 }
 
