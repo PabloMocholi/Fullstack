@@ -15,6 +15,27 @@ const ArtGallery = [
 function mostrarTodo() {
 
     ArtGallery.forEach(a => {
+
+        /** OPTIMIZACIÓN
+         *  
+         *          se puede hacer una variable para comprobar: 
+         * 
+         *          const Exhibited = arte.isExhibited?"SE":"NO SE"
+         *          console.log(`La obra ${a.title} por el autor ${a.artist} (${a.year}) ${Exhibited} encuentra exhibida`)
+         *          
+         *          --------------
+         * 
+         *          se podría convertir en función de Callback 
+         * 
+         *          const imprimir = (a) =>{
+         * 
+         *                  const Exhibited = arte.isExhibited?"SE":"NO SE"
+         *                  console.log(`La obra ${a.title} por el autor ${a.artist} (${a.year}) ${Exhibited} encuentra exhibida`)
+         *          }
+         * 
+         *          ArtGallery.forEach(imprimir);
+        */
+
         if (a.isExhibited)
             console.log(`La obra ${a.title} por el autor ${a.artist} (${a.year}) SE encuentra exhibida`)
         else
@@ -54,12 +75,9 @@ function buscarObra(obra) {
 
 function buscarObraFecha() {
     const fecha = document.getElementById('fecha').value;
-    let encontrado = false;
+    
 
-    ArtGallery.some(a => {
-        if (a.year == Number(fecha))
-            encontrado = true;
-    })
+    const encontrado =  ArtGallery.some(a =>  a.year == Number(fecha))
 
     if (encontrado)
         console.log("Hay obras que coinciden con esa fecha")
@@ -72,12 +90,7 @@ function buscarObraFecha() {
 function buscarObraEpoca() {
     const fecha = document.getElementById('epoca').value;
 
-
-    const encontrado = ArtGallery.every(a => {
-        console.log(a.year)
-        return a.year > Number(fecha) //si quito el return falla
-    })
-
+    const encontrado = ArtGallery.every(a =>  a.year > Number(fecha) ) ///no poner llaves significa que hace un return sin necesidad de escribirlo
 
     if (encontrado)
         console.log(`Todas las obras son posteriores a ${fecha}`)
@@ -92,10 +105,7 @@ function buscarObraEpoca() {
 function buscarObraPosicion() {
     const obra = document.getElementById('posicion').value;
 
-    const encontrado = ArtGallery.findIndex(a => {
-        //console.log(a.title)
-        return a.title == obra
-    })
+    const encontrado = ArtGallery.findIndex(a => a.title == obra)
 
 
     if (encontrado != -1)
