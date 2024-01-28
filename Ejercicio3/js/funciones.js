@@ -70,7 +70,7 @@ function newColor(){
 
 
     divLista.innerHTML += `<div id="${totalColors}" style="display:flex; gap:5px">
-     <span onclick="eliminarElemento(${totalColors})" style="flex-grow:1">${codigoColor.textContent}</span>
+     <span onclick="eliminarElemento(${totalColors})" style="flex-grow:1; cursor:pointer">${codigoColor.textContent}</span>
      <div  onclick="setColor('${codigoColor.textContent}')" style="width:20px;cursor:pointer; height:20px;border-radius: 20px; background-color:${codigoColor.textContent} "></div>
     </div>`
 }
