@@ -6,16 +6,21 @@ console.log("Ejercicio 06");
  *  Este vector contendrá información sobre una persona en el siguiente formato: persona = ["Juan", "Pérez", 30];
 // Debe mostrar { nombre: "Juan", apellido: "Pérez", edad: 30 }
  */
- let persona = ["Juan", "Pérez", 30];
+let persona = ["Juan", "Pérez", 30];
 
- function vectorAObjeto(props){
+function vectorAObjeto(props) {
 
-    let[nombre, apellido, edad ] = props;
-    return({
-        nombre:nombre, 
-        apellido: apellido, 
-        edad: edad})
+    let [nombre, apellido, edad] = props;
+    return ({
+        nombre: nombre,
+        apellido: apellido,
+        edad: edad
+    })
 
- }
+}
 
- console.log(vectorAObjeto(persona));
+console.log(vectorAObjeto(persona));
+
+//----
+
+
