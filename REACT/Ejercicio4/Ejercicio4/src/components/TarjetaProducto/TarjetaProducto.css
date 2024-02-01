@@ -1,0 +1,48 @@
+
+/*-----*/
+
+.DisplayTarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+
+.TarjetaProducto{
+    border: 1px solid black;
+    width: 35%;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.TarjetaProducto-nombre{
+    text-align: center;
+    height: 100px;
+}
+
+.TarjetaProducto-imagen{
+    height: 300px;
+    display: block;
+    margin: auto;
+
+}
+
+.TarjetaProducto-caracteristicas{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.TarjetaProducto-descripcion{
+    margin-bottom: 20px;
+}
+
+.TarjetaProducto-descripcion-tit{
+    margin-bottom: 0;
+}
+.TarjetaProducto-descripcion-contenido{
+    height: 200px;
+    overflow: auto;
+}
+
