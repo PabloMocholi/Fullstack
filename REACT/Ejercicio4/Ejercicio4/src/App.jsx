@@ -6,6 +6,7 @@ function App() {
 
   return (
     <>
+      <h1 className="TitPagina">TIENDA"OFICIAL" NINTENDO</h1>
       <div className="DisplayTarjetas">
         <TarjetaProducto nombre="Nintendo Switch" imagen="https://i.blogs.es/1da4e7/intendo-switch/450_1000.jpg" precio="300€" stock="10">
           <p>

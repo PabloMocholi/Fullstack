@@ -5,7 +5,10 @@ const TarjetaProducto = ({ nombre, imagen, precio, stock, children }) => {
         <>
             <div className="TarjetaProducto">
                 <h1 className="TarjetaProducto-nombre">{nombre}</h1>
-                <img className="TarjetaProducto-imagen" src={imagen} alt="switch" />
+                <div className="fondoBlanco">
+                    <img className="TarjetaProducto-imagen" src={imagen} alt="switch" />
+
+                </div>
                 <div className="TarjetaProducto-caracteristicas">
                     <span>{precio}</span>
                     <span>Disponibles: {stock}</span>
