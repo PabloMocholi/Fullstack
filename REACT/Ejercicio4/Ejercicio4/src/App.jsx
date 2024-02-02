@@ -43,6 +43,28 @@ function App() {
           </p>
 
         </TarjetaProducto>
+        <TarjetaProducto nombre="Volante Mario" imagen="https://www.tradeinn.com/f/13781/137814388/hori-volante-racing-nintendo-switch-mario-kart-pro-deluxe.jpg" precio="84.34€" stock="0">
+          <p>
+          Experimenta la emoción de las carreras en tu Nintendo Switch con nuestro volante. Diseño ergonómico, controles accesibles y la opción de pedales para una experiencia inmersiva. Fácil de instalar, lleva tus juegos al siguiente nivel. ¡Hazte con el tuyo y disfruta de la velocidad como nunca antes!
+
+          </p>
+         
+
+        </TarjetaProducto>
+        <TarjetaProducto nombre="Fundas Silicona" imagen="https://ae01.alicdn.com/kf/H17e4c534980d4cb1984d8a84153436e4H.jpg_640x640Q90.jpg_.webp" precio="10€" stock="23">
+          <p>
+          Asegura la integridad de tu Nintendo Switch con nuestras fundas de silicona premium. Estas fundas están diseñadas con un ajuste perfecto para tu consola, ofreciendo una protección completa contra caídas, golpes y arañazos. Su material de silicona duradero absorbe los impactos, manteniendo tu Switch en condiciones óptimas durante más tiempo.
+          </p>
+    
+          <p>
+          Además de su excelente protección, estas fundas de silicona tienen un diseño delgado que no añade volumen innecesario a tu dispositivo, manteniendo su aspecto elegante y portátil. Los recortes precisos garantizan un acceso completo a todos los botones, puertos y funciones de la Switch, sin comprometer la comodidad ni la facilidad de uso
+          </p>
+          <p>
+          Ya sea que estés jugando en casa o de viaje, nuestras fundas de silicona brindan una tranquilidad adicional, permitiéndote disfrutar de tus juegos sin preocupaciones. Disponibles en una variedad de colores y diseños, puedes personalizar tu Switch para que se adapte a tu estilo único.
+          </p>
+          <p>No arriesgues la seguridad de tu consola. Protege tu inversión con nuestras fundas de silicona de alta calidad y asegúrate de que tu Nintendo Switch esté siempre lista para la acción.</p>
+
+        </TarjetaProducto>
       </div>
 
     </>
