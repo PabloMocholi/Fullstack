@@ -17,7 +17,11 @@ const TarjetaProducto = ({ nombre, imagen, precio, stock, children }) => {
                 <div className="TarjetaProducto-descripcion">
                     <h2 className="TarjetaProducto-descripcion-tit">Descripción:</h2>
                     <div className="TarjetaProducto-descripcion-contenido">
-                        {children}
+                       
+                    {children.map((parrafo, index) => <p key={index}>{parrafo}</p>)}
+
+
+
                     </div>
                 </div>
 
