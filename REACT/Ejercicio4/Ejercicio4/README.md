@@ -10,7 +10,8 @@ Currently, two official plugins are available:
 
 
 # Codigo sin usar array
- {/* <TarjetaProducto nombre="Nintendo Switch" imagen="https://i.blogs.es/1da4e7/intendo-switch/450_1000.jpg" precio="300€" stock="10">
+ 
+        <TarjetaProducto nombre="Nintendo Switch" imagen="https://i.blogs.es/1da4e7/intendo-switch/450_1000.jpg" precio="300€" stock="10">
           <p>
             Nintendo Switch (ニンテンドー スイッチ Nintendō Suitchi?) es una consola de videojuegos desarrollada por Nintendo. Conocida en el desarrollo por su nombre código «NX», se dio a conocer en octubre de 2016 y fue lanzada mundialmente el 3 de marzo de 2017.
           </p>
@@ -66,4 +67,4 @@ Currently, two official plugins are available:
           </p>
           <p>No arriesgues la seguridad de tu consola. Protege tu inversión con nuestras fundas de silicona de alta calidad y asegúrate de que tu Nintendo Switch esté siempre lista para la acción.</p>
 
-        </TarjetaProducto>*/}
+        </TarjetaProducto>
