@@ -10,9 +10,9 @@ function App() {
   const [isLoaded, setLoad] = useState(false)
 
   useEffect(() => {
-    setTimeout(()=>{
+    setTimeout(() => {
       fetchData()
-    },2000)
+    }, 2000)
 
 
   }, [])
@@ -20,21 +20,25 @@ function App() {
 
   const fetchData = async () => {
 
+    try {
+      let indicesRandom = []
 
-    let indicesRandom = []
+      for (let i = 0; i < 5; i++) {
+        indicesRandom.push(Math.floor(Math.random() * 800))
+      }
 
-    for (let i = 0; i < 5; i++) {
-      indicesRandom.push(Math.floor(Math.random() * 800))
+      const responses = await Promise.all(
+        indicesRandom.map(async (i) => {
+          const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
+          return response.json()
+        }))
+
+      setData(responses)
+      setLoad(true)
+    } catch (error) {
+      console.log("error:", error)
     }
 
-    const responses = await Promise.all(
-      indicesRandom.map(async (i) => {
-        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
-        return response.json()
-      }))
-
-    setData(responses)
-    setLoad(true)
   }
 
   return (<>
