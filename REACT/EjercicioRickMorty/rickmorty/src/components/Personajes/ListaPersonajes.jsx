@@ -9,14 +9,23 @@ const ListaPersonajes = ({ }) => {
     const [paginaActual, setPagina] = useState(1)
     const [personajes, setPersonajes] = useState([]);
     const [paginasTotales, setPaginasTotales] = useState(0)
+    const [elementosPorPagina, setElementosPorPagina] = useState(0);
+    const [filtro, setFiltro] = useState("all")
 
 
     const cargarPersonajes = async () => {
         try {
-            const response = await fetch(`https://rickandmortyapi.com/api/character?page=${paginaActual}`);
+
+            let url =  `https://rickandmortyapi.com/api/character?page=${paginaActual}`
+            if (filtro !== "all") {
+                url += `&status=${filtro}`;
+            }
+
+            const response = await fetch(url);
             const data = await response.json();
             setPersonajes(data.results);
-            setPaginasTotales(data.info.pages)
+            setPaginasTotales(data.info.pages);
+            setElementosPorPagina(data.results.length);
             //console.log("personajes", data)
         } catch (error) {
             console.error(error);
@@ -25,9 +34,7 @@ const ListaPersonajes = ({ }) => {
 
     useEffect(() => {
         cargarPersonajes();
-    }, [paginaActual]);
-
-
+    }, [paginaActual,filtro]);
 
     return (
         <>
@@ -37,10 +44,46 @@ const ListaPersonajes = ({ }) => {
                     personajes.length > 0 && (
                         <>
                             {
-
+                                filtro == "all" &&
                                 personajes.map((personaje) => {
                                     //console.log(personaje)
                                     return (
+                                        <>
+                                            <Personaje key={personaje.id} datos={personaje} />
+                                        </>
+
+                                    )
+                                })
+                            }
+                            {
+                                filtro == "dead" &&
+                                personajes.map((personaje) => {
+                                    console.log(personaje.status)
+                                    return (personaje.status == "Dead" &&
+                                        <>
+                                            <Personaje key={personaje.id} datos={personaje} />
+                                        </>
+
+                                    )
+                                })
+                            }
+                            {
+                                filtro == "alive" &&
+                                personajes.map((personaje) => {
+                                    console.log(personaje.status)
+                                    return (personaje.status == "Alive" &&
+                                        <>
+                                            <Personaje key={personaje.id} datos={personaje} />
+                                        </>
+
+                                    )
+                                })
+                            }
+                               {
+                                filtro == "unknow" &&
+                                personajes.map((personaje) => {
+                                    console.log(personaje.status)
+                                    return (personaje.status == "unknown" &&
                                         <>
                                             <Personaje key={personaje.id} datos={personaje} />
                                         </>
@@ -65,6 +108,22 @@ const ListaPersonajes = ({ }) => {
                     setPagina(paginaActual + 1)
             }}>Siguiente</button>
             <span>{paginaActual}/{paginasTotales} </span>
+            <span>Elementos totales: {elementosPorPagina}</span>
+
+            <div>
+                <button onClick={() => {
+                    setFiltro("alive")
+                }}>alive</button>
+                <button onClick={() => {
+                    setFiltro("dead")
+                }}>dead</button>
+                <button onClick={() => {
+                    setFiltro("unknow")
+                }}>unknow</button>
+                <button onClick={() => {
+                    setFiltro("all")
+                }}>all</button>
+            </div>
 
         </>
     )

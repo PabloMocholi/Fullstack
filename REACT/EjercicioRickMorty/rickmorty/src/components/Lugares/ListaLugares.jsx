@@ -8,10 +8,11 @@ const ListaLugares = () => {
 
     const [lugares, setLugares] = useState([])
     const [paginasTotales, setPaginasTotales] = useState(0)
+    const [paginaActual, setPagina] = useState(1)
 
     const cargarPersonajes = async () => {
         try {
-            const response = await fetch(`https://rickandmortyapi.com/api/location?page=2`);
+            const response = await fetch(`https://rickandmortyapi.com/api/location?page=${paginaActual}`);
             const data = await response.json();
             setLugares(data.results);
             setPaginasTotales(data.info.pages)
@@ -24,7 +25,7 @@ const ListaLugares = () => {
 
     useEffect(() => {
         cargarPersonajes()
-    }, [])
+    }, [paginaActual])
 
     return (
         <>
@@ -41,6 +42,15 @@ const ListaLugares = () => {
                     })
                 }
             </div>
+            <button onClick={() => {
+                paginaActual > 1 &&
+                    setPagina(paginaActual - 1)
+            }}>Anterior</button>
+            <button onClick={() => {
+                paginaActual < paginasTotales &&
+                    setPagina(paginaActual + 1)
+            }}>Siguiente</button>
+            <span>{paginaActual}/{paginasTotales} </span>
         </>
     )
 
