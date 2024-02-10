@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+import './newApp.css'
 import ListaPersonajes from './components/Personajes/ListaPersonajes'
 import ListaLugares from './components/Lugares/ListaLugares'
 import ListaEpisodios from './components/Episodios/ListaEpisodios'
@@ -49,16 +49,18 @@ function App() {
           setPagina("episodios")
         }}>Episodios</span>
       </nav>
+      <div className='GeneralContainer'>
+        {
+          paginaActual === "personajes" && <ListaPersonajes />
+        }
+        {
+          paginaActual === "lugares" && <ListaLugares />
+        }
+        {
+          paginaActual === "episodios" && <ListaEpisodios />
+        }
+      </div>
 
-      {
-        paginaActual === "personajes" && <ListaPersonajes />
-      }
-      {
-        paginaActual === "lugares" && <ListaLugares />
-      }
-      {
-        paginaActual === "episodios" && <ListaEpisodios />
-      }
 
     </>
   )

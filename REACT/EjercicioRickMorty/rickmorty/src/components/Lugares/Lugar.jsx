@@ -5,12 +5,17 @@ const Lugar = ({ datos }) => {
         return null;
     }
 
-    const { name, dimension } = datos;
+    const { name, dimension, type } = datos;
 
     return (<>
         <div className="Lugar">
-            <h3>{name}</h3>
-            <span>{dimension}</span>
+            <div>
+                <h3 className='Lugar-nombre'>{name}</h3>
+                <span className='ligth'>{type}</span>
+            </div>
+
+            <span><span className='dimension'>DIMENSION: </span>{dimension}</span>
+
         </div>
 
 

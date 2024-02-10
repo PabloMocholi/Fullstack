@@ -1,5 +1,14 @@
 .Lugar{
     padding: 20px;
-    border: 1px solid black;
-    width: 255px;
+    border: 1px solid white;
+    background-color: black;
+    width: 300px;
+}
+
+.Lugar-nombre{
+    margin: 0;
+}
+
+.dimension{
+    font-family: "RM";
 }

@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "RM";
+    src: url("./get_schwifty.ttf");
+}
+
+body {
+    background-image: url("https://freight.cargo.site/t/original/i/69dc7a9326926d36aad3c29a24994c2fe9fbf51c2de556421be7e5b664e48945/R-M_Pattern.png");
+
+}
+
+button {
+    background-color: black;
+}
+
+
+.NavLink {
+    cursor: pointer;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.NavLink.active,
+.NavLink:hover {
+    font-weight: bold;
+    color: yellow;
+}
+
+.NavRM {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: black;
+    font-family: "RM";
+
+}
+
+.GeneralContainer {
+    display: block;
+    width: 100%;
+    height: 40%;
+
+    margin-top: 60px;
+}

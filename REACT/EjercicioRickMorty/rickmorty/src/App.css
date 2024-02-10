@@ -40,26 +40,3 @@
 .read-the-docs {
   color: #888;
 }
-
-.NavLink{
-  cursor: pointer;
-  padding: 20px;
-  border: 1px solid black;
-  border-radius: 20px;
-}
-
-.NavLink.active, .NavLink:hover{
-  background-color: black;
-  color: white;
-}
-
-.NavRM{
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  
-  
-}

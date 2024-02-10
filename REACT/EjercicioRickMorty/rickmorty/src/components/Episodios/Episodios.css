@@ -1,0 +1,15 @@
+.Episodio{
+    padding: 20px;
+    border: 1px solid white;
+    background-color: black;
+    width: 90%;
+}
+
+.Episodio-name{
+    margin:0;
+}
+
+.Episodio-data{
+    display: flex;
+    justify-content: space-between;
+}

@@ -4,6 +4,7 @@ import './ListaPersonajes.css'
 
 
 
+
 const ListaPersonajes = ({ }) => {
 
     const [paginaActual, setPagina] = useState(1)
@@ -16,7 +17,7 @@ const ListaPersonajes = ({ }) => {
     const cargarPersonajes = async () => {
         try {
 
-            let url =  `https://rickandmortyapi.com/api/character?page=${paginaActual}`
+            let url = `https://rickandmortyapi.com/api/character?page=${paginaActual}`
             if (filtro !== "all") {
                 url += `&status=${filtro}`;
             }
@@ -34,11 +35,56 @@ const ListaPersonajes = ({ }) => {
 
     useEffect(() => {
         cargarPersonajes();
-    }, [paginaActual,filtro]);
+    }, [paginaActual, filtro]);
 
     return (
         <>
-            <h1>LISTA PERSONAJES</h1>
+            <div className="PanelControl">
+                <div className="PanelControl-filtros">
+                    Filtrar por STATUS
+                    <div>
+                        <button className={`${filtro == "alive" ? "btnA" : ""}`} onClick={() => {
+                            setFiltro("alive")
+                        }}>alive</button>
+                        <button className={`${filtro == "dead" ? "btnA" : ""}`}  onClick={() => {
+                            setFiltro("dead")
+                        }}>dead</button>
+
+                    </div>
+                    <div>
+                        <button className={`${filtro == "unknow" ? "btnA" : ""}`}  onClick={() => {
+                            setFiltro("unknow")
+                        }}>unknow</button>
+                        <button className={`${filtro == "all" ? "btnA" : ""}`}  onClick={() => {
+                            setFiltro("all")
+                        }}>all</button>
+                    </div>
+
+                </div>
+                <h1 className="PanelControl-tit">LISTA PERSONAJES</h1>
+                <div className="PanelControl-pages">
+                    <div>
+                        <button onClick={() => {
+                            paginaActual > 1 &&
+                                setPagina(paginaActual - 1)
+                        }}>Anterior</button>
+                        <button onClick={() => {
+                            paginaActual < paginasTotales &&
+                                setPagina(paginaActual + 1)
+                        }}>Siguiente</button>
+                    </div>
+                    <div>
+                        <span>{paginaActual}/{paginasTotales} </span>
+                        <span>Elementos totales: {elementosPorPagina}</span>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+
             <div className="DisplayPersonajes">
                 {
                     personajes.length > 0 && (
@@ -79,7 +125,7 @@ const ListaPersonajes = ({ }) => {
                                     )
                                 })
                             }
-                               {
+                            {
                                 filtro == "unknow" &&
                                 personajes.map((personaje) => {
                                     console.log(personaje.status)
@@ -99,31 +145,6 @@ const ListaPersonajes = ({ }) => {
             </div>
 
 
-            <button onClick={() => {
-                paginaActual > 1 &&
-                    setPagina(paginaActual - 1)
-            }}>Anterior</button>
-            <button onClick={() => {
-                paginaActual < paginasTotales &&
-                    setPagina(paginaActual + 1)
-            }}>Siguiente</button>
-            <span>{paginaActual}/{paginasTotales} </span>
-            <span>Elementos totales: {elementosPorPagina}</span>
-
-            <div>
-                <button onClick={() => {
-                    setFiltro("alive")
-                }}>alive</button>
-                <button onClick={() => {
-                    setFiltro("dead")
-                }}>dead</button>
-                <button onClick={() => {
-                    setFiltro("unknow")
-                }}>unknow</button>
-                <button onClick={() => {
-                    setFiltro("all")
-                }}>all</button>
-            </div>
 
         </>
     )
