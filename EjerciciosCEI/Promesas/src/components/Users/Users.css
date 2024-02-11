@@ -1,0 +1,5 @@
+.ListaUsers{
+    display: flex;
+    overflow: scroll;
+    gap: 20px;
+}

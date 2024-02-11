@@ -1,0 +1,19 @@
+.ExpositorPrendas{
+    display: flex;
+    overflow: scroll;
+    gap: 20px;
+}
+
+.ExpositorPrendas-prenda{
+    display: flex;
+    flex-direction: column;
+}
+
+.ExpositorPrendas-prenda-nombre{
+    height: 70px;
+}
+
+.ExpositorPrenda-prenda-imagen{
+    width: 200px;
+    height: 200px;
+}
