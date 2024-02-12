@@ -5,12 +5,15 @@
 
 body {
     background-image: url("https://freight.cargo.site/t/original/i/69dc7a9326926d36aad3c29a24994c2fe9fbf51c2de556421be7e5b664e48945/R-M_Pattern.png");
+    color:white;
 
 }
 
 button {
     background-color: black;
+    color:white;
 }
+
 
 
 .NavLink {

@@ -6,6 +6,7 @@
     margin-bottom: 30px;
     padding: auto;
     gap: 30px;
+    color:white
 
 }
 
@@ -16,6 +17,7 @@
     justify-content: space-around;
     padding: 20px;
     align-items: center;
+    color:white;
 }
 
 .PanelControl-tit{
