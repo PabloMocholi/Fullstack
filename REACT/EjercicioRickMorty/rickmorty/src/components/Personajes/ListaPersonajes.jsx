@@ -46,16 +46,16 @@ const ListaPersonajes = ({ }) => {
                         <button className={`${filtro == "alive" ? "btnA" : ""}`} onClick={() => {
                             setFiltro("alive")
                         }}>alive</button>
-                        <button className={`${filtro == "dead" ? "btnA" : ""}`}  onClick={() => {
+                        <button className={`${filtro == "dead" ? "btnA" : ""}`} onClick={() => {
                             setFiltro("dead")
                         }}>dead</button>
 
                     </div>
                     <div>
-                        <button className={`${filtro == "unknow" ? "btnA" : ""}`}  onClick={() => {
+                        <button className={`${filtro == "unknow" ? "btnA" : ""}`} onClick={() => {
                             setFiltro("unknow")
                         }}>unknow</button>
-                        <button className={`${filtro == "all" ? "btnA" : ""}`}  onClick={() => {
+                        <button className={`${filtro == "all" ? "btnA" : ""}`} onClick={() => {
                             setFiltro("all")
                         }}>all</button>
                     </div>
@@ -87,60 +87,72 @@ const ListaPersonajes = ({ }) => {
 
             <div className="DisplayPersonajes">
                 {
-                    personajes.length > 0 && (
-                        <>
-                            {
-                                filtro == "all" &&
-                                personajes.map((personaje) => {
-                                    //console.log(personaje)
-                                    return (
-                                        <>
-                                            <Personaje key={personaje.id} datos={personaje} />
-                                        </>
 
-                                    )
-                                })
-                            }
-                            {
-                                filtro == "dead" &&
-                                personajes.map((personaje) => {
-                                    console.log(personaje.status)
-                                    return (personaje.status == "Dead" &&
-                                        <>
-                                            <Personaje key={personaje.id} datos={personaje} />
-                                        </>
+                    personajes.map((personaje) => {
+                        //console.log(personaje)
+                        return (
+                            <>
+                                <Personaje key={personaje.id} datos={personaje} />
+                            </>
 
-                                    )
-                                })
-                            }
-                            {
-                                filtro == "alive" &&
-                                personajes.map((personaje) => {
-                                    console.log(personaje.status)
-                                    return (personaje.status == "Alive" &&
-                                        <>
-                                            <Personaje key={personaje.id} datos={personaje} />
-                                        </>
+                        )
+                    })
+                            /* { 
+                                personajes.length > 0 && (
+                                    <>
+                                        {
+                                            filtro == "all" &&
+                                            personajes.map((personaje) => {
+                                                //console.log(personaje)
+                                                return (
+                                                    <>
+                                                        <Personaje key={personaje.id} datos={personaje} />
+                                                    </>
 
-                                    )
-                                })
-                            }
-                            {
-                                filtro == "unknow" &&
-                                personajes.map((personaje) => {
-                                    console.log(personaje.status)
-                                    return (personaje.status == "unknown" &&
-                                        <>
-                                            <Personaje key={personaje.id} datos={personaje} />
-                                        </>
+                                                )
+                                            })
+                                        }
+                                        {
+                                            filtro == "dead" &&
+                                            personajes.map((personaje) => {
+                                                console.log(personaje.status)
+                                                return (personaje.status == "Dead" &&
+                                                    <>
+                                                        <Personaje key={personaje.id} datos={personaje} />
+                                                    </>
 
-                                    )
-                                })
-                            }
+                                                )
+                                            })
+                                        }
+                                        {
+                                            filtro == "alive" &&
+                                            personajes.map((personaje) => {
+                                                console.log(personaje.status)
+                                                return (personaje.status == "Alive" &&
+                                                    <>
+                                                        <Personaje key={personaje.id} datos={personaje} />
+                                                    </>
 
-                        </>)
+                                                )
+                                            })
+                                        }
+                                        {
+                                            filtro == "unknow" &&
+                                            personajes.map((personaje) => {
+                                                console.log(personaje.status)
+                                                return (personaje.status == "unknown" &&
+                                                    <>
+                                                        <Personaje key={personaje.id} datos={personaje} />
+                                                    </>
+
+                                                )
+                                            })
+                                        }
+
+                                    </>)
 
 
+                            } */
                 }
             </div>
 
