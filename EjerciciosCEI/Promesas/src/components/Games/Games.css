@@ -1,0 +1,19 @@
+.DisplayGames{
+    display: flex;
+
+
+}
+
+.ImageGame
+{
+    width: 300px;
+    height: 200px;
+}
+.Game{
+    display: flex;
+    flex-direction: column;
+}
+
+.Game-name{
+    height: 70px;
+}

@@ -1,0 +1,15 @@
+.imageMonster{
+    width:  550px;
+    height: 400px;
+}
+
+.nameMonster{
+    font-size: 220%;
+    font-weight: bold;
+}
+
+.displayMonster{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
