@@ -40,3 +40,37 @@
 .read-the-docs {
   color: #888;
 }
+
+body{
+  background-image: url("https://static.vecteezy.com/system/resources/previews/000/464/040/original/vector-dog-seamless-pattern-theme-bone-paw-foot-print-for-use-as-wallpaper-or-background.jpg");
+  font-family: "Fredoka", sans-serif;
+}
+
+.App-btns{
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 1%;
+  width: 500px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.App-btn{
+  padding: 20px;
+  font-size: 130%;
+  border-radius: 10px;
+  border: 1px solid #986619;
+  background-color: white;
+  color: #986619;
+}
+
+.App-btn--add{
+  border-radius: 200px;
+}
+
+.App-btn:hover{
+
+  background-color: #986619;
+  color: white;
+}

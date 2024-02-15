@@ -1,0 +1,53 @@
+.AddAnimal {
+
+    border: 1px solid #986619;
+    width: 500px;
+    height: 500px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 20px;
+
+}
+
+.AddAnimal-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.AddAnimal-button {
+    width: 60%;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 120%;
+
+    border: 1px solid #986619;
+    background-color: white;
+    color: #986619;
+}
+
+.AddAnimal-button:hover {
+
+    background-color: #986619;
+    color: white;
+}
+
+.AddAnimal-cerrar{
+    position: fixed;
+    bottom: 1%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 50px;
+    color: #986619;
+    border: 1px solid #986619;;
+}
+
+.AddAnimal-cerrar:hover{
+
+    color: white;
+    background-color: #986619;
+}

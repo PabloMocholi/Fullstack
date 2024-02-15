@@ -1,51 +1,121 @@
+.ListaAnimales {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
 
 /*------------------------------*/
 
-.Animal{
+.Animal {
     display: flex;
-    border: 1px solid black;
     padding: 20px;
-    gap: 20px;
-    width: 500px;
+
+    width: 700px;
+    height: 200px;
     justify-content: space-around;
-    background-color: white;
+    background-color: #E8DCCA;
     color: black;
     border-radius: 200px;
     cursor: pointer;
+    box-shadow: 5px 10px 8px #888888;
 }
 
-.Animal-img{
-    width: 200px;
-    border-radius:100px ;
-    border: 2px solid black;
+.Animal-img {
+    width: 320px;
+    border-radius: 150px;
+
+    margin-left: -40px;
 }
 
+.Animal-div {
+    display: flex;
+    flex-direction: column;
 
+    justify-content: center;
+    align-items: self-start;
+}
+
+.Animal-h2 {
+    margin: 0;
+}
+
+.Animal-h4 {
+    color: gray;
+}
+
+.Animal-p {
+    font-size: 120%;
+}
 
 /*------------------------------*/
-.AnimalInfo{
+.AnimalInfo {
     position: fixed;
     top: 50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 1000px;
     height: 500px;
     background-color: white;
     color: black;
+    border: 1px solid #986619;
+    border-radius: 20px;
 }
 
-.AnimalInfo-img{
+.AnimalInfo-h1 {
+    color: #986619;
+    margin: 20px;
+}
+
+.AnimalInfo-flechas {
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+    font-size: 220%;
+    color: #986619;
+    margin: 10px;
+}
+
+.AnimalInfo-img {
 
     width: 450px;
     height: 300px;
 
 }
 
-.AnimalInfo-div{
+.AnimalInfo-div {
     display: flex;
+    justify-content: space-around;
+
 }
 
 /*------------------------------*/
-.u-blur{
+
+
+.Accordeon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+
+}
+
+.AccordeonAnimal-h3 {
+    cursor: pointer;
+
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #986619;
+    color: white;
+
+}
+
+
+/*------------------------------*/
+
+
+
+
+.u-blur {
     filter: blur(10px);
 }
