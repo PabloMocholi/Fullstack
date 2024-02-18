@@ -1,8 +1,11 @@
 .ListaAnimales {
     display: flex;
     flex-direction: column;
-
     align-items: center;
+}
+
+.ListaAnimales-h2{
+    color:black;
 }
 
 /*------------------------------*/

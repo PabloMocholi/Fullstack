@@ -104,8 +104,8 @@ const SliderAnimal = ({ imagenes }) => {
             <div>
                 <img className='AnimalInfo-img' src={imagenes[imagenActual]} alt="" />
                 <div className='AnimalInfo-flechas'>
-                    <i onClick={previoustImage} class="fa-solid fa-arrow-left"></i>
-                    <i onClick={nextImage} class="fa-solid fa-arrow-right"></i>
+                    <i onClick={previoustImage} className="fa-solid fa-arrow-left"></i>
+                    <i onClick={nextImage} className="fa-solid fa-arrow-right"></i>
 
                     {/* <button onClick={previoustImage}>Anterior</button>
                     <button onClick={nextImage}>Siguiente</button> */}

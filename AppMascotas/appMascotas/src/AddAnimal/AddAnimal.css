@@ -43,11 +43,16 @@
     padding: 20px;
     border-radius: 50px;
     color: #986619;
-    border: 1px solid #986619;;
+    border: 1px solid #986619;
+    background-color: white;
 }
 
 .AddAnimal-cerrar:hover{
 
     color: white;
     background-color: #986619;
+}
+
+.AddAnimal-h1{
+    color:#986619
 }
