@@ -36,8 +36,6 @@ const Animal = (props) => {
         console.log(isOpen)
     }
 
-
-
     return (<>
         <div className={`Animal ${isOpen ? "u-blur" : ""}`} onClick={ToggleActive}>
             <img className='Animal-img' src={imagenes[0]} alt={nombre} />

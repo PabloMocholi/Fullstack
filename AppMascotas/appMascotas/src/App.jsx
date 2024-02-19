@@ -25,6 +25,24 @@ const animalesAdoptados = [
         id: 3, titulo: "Info extra ", contenido: ["Info extra"]
       }
     ]
+  },  {
+    id: 2,
+    nombre: "Lucky",
+    raza: "Husky",
+    descripcion: "Perro gritón",
+    imagenes: ["https://www.diariodesevilla.es/2023/10/24/mascotas/Motivos-debes-pensar-adoptar-husky_1841826089_195473169_1200x675.jpg",
+      "https://estaticos-cdn.prensaiberica.es/clip/dd635419-5120-4a72-a488-bd77608a3492_source-aspect-ratio_default_0.jpg",
+      "https://www.zooplus.es/magazine/wp-content/uploads/2019/10/Siberian-Husky-mit-Welpe-768x512.jpg"],
+    detalles: [
+      {
+        id: 1, titulo: "Rasgos físicos", contenido: ["pelo largo", "3 años"]
+      },
+      {
+        id: 2, titulo: "Detalles dueños", contenido: ["Pablo", "14 años"]
+      }, {
+        id: 3, titulo: "Info extra ", contenido: ["Info extra"]
+      }
+    ]
   }
 ]
 
@@ -35,7 +53,8 @@ const animalesPendientes = [
     nombre: "Gary",
     raza: "Gato Persa",
     descripcion: "Refunfuñon y poco sociable",
-    imagenes: ["https://www.kiwoko.com/blogmundoanimal/wp-content/uploads/2021/10/gato-persa-curiosidades.jpg"],
+    imagenes: ["https://www.kiwoko.com/blogmundoanimal/wp-content/uploads/2021/10/gato-persa-curiosidades.jpg",
+  "https://ateuves.es/wp-content/uploads/2018/03/at0318_gato_persa_enfermedades_portada.jpg"],
     detalles: [
       {
         id: 1, titulo: "Rasgos físicos", contenido: ["pelo gris", "3 años"]
@@ -64,9 +83,6 @@ function App() {
   const toggleNewAnimal = () => {
     setnewAnimal(!newAnimal)
   }
-
-
-
 
 
   return (
