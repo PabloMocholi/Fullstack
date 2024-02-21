@@ -60,18 +60,81 @@ app.get("/biblioteca/categoria/:categoria", (req, res) => {
 
 app.get("/biblioteca/autores/autores", (req, res) => {
 
-   
-    const autores = libros.libros.map( libro =>{ 
+    const comparativa = []
+    const noRepetidos = []
+    let encontrado = false;
 
-        return { autor: libro.autor };
-    } )
-    console.log(autores)
+    libros.libros.forEach(libro => {
 
-   
+        comparativa.push(libro.autor)
+        //console.log("comparativa: ", comparativa)
+
+        if (comparativa.length == 1) {
+            noRepetidos.push(libro.autor)
+        } else {
+            encontrado = false;
+
+            for (let i = 0; i < comparativa.length - 1; i++) {
+
+                if (comparativa[i] == libro.autor) {
+                    encontrado = true
+                    // console.log("REPETIDO")
+                }
+
+            }
+
+            if (!encontrado) {
+                noRepetidos.push(libro.autor)
+            }
+        }
+
+    })
+
+
     res.setHeader("Content-Type", "application/json");
-    res.json(autores);
- 
-    
+    res.json(noRepetidos);
+
+
+})
+
+
+app.get("/biblioteca/solocategoria/categoria", (req, res) => {
+
+    const comparativa = []
+    const noRepetidos = []
+    let encontrado = false;
+    console.log("HOLA")
+    libros.libros.forEach(libro => {
+
+        comparativa.push(libro.categoria)
+        console.log("comparativa: ", comparativa)
+
+        if (comparativa.length == 1) {
+            noRepetidos.push(libro.categoria)
+        } else {
+            encontrado = false;
+
+            for (let i = 0; i < comparativa.length - 1; i++) {
+
+                if (comparativa[i] == libro.categoria) {
+                    encontrado = true
+                    // console.log("REPETIDO")
+                }
+
+            }
+
+            if (!encontrado) {
+                noRepetidos.push(libro.categoria)
+            }
+        }
+
+    })
+
+
+    res.setHeader("Content-Type", "application/json");
+    res.json(noRepetidos);
+
+
 })
 
 
