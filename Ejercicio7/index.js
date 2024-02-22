@@ -66,6 +66,7 @@ app.get("/biblioteca/autores/autores", (req, res) => {
     const noRepetidos = []
     let encontrado = false;
 
+    //se puede hacer con un include más rápido 
     libros.libros.forEach(libro => {
 
         comparativa.push(libro.autor)
