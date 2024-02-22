@@ -31,6 +31,8 @@ app.get("/biblioteca/autor/:autor", (req, res) => {
     const autor = req.params.autor;
     const libro = libros.libros.filter(libro => libro.autor == autor)
 
+    //libro.autor.includes(autor) -> no hace falta que la búsqueda sea exacta. Include devuelve un boolean
+
     if (libro) {
         const jsonData = JSON.stringify(libro)
         res.setHeader("Content-Type", "application/json");
