@@ -1,0 +1,32 @@
+.Movimientos{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.Movimiento{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    height: 350px;
+    border-radius: 300px;
+    color: white;
+}
+
+.Movimiento-name{
+    margin-top: 30px;
+}
+
+.Movimiento-img{
+    width: 200px;
+    height: 200px;
+
+}
+
+.Movimiento-stats{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}

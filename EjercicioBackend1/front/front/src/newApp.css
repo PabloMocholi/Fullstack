@@ -1,0 +1,10 @@
+body{
+    background-image: url("https://i.pinimg.com/originals/98/00/ff/9800ff153c8f538c15d6dbfb53b76b39.png");
+}
+
+.separador{
+    height: 10px;
+    color: white;
+    background-color: white;
+    border: 0;
+}
