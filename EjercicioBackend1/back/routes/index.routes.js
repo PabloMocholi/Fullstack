@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { datos } from "../db/datos.js";
 
-import { getPokedex } from "../controllers/pokemon.controller.js";
+import { addPokemon, getPokedex } from "../controllers/pokemon.controller.js";
 import { getAtaques } from "../controllers/movimientos.controller.js";
 
 const router = Router();
@@ -16,6 +16,7 @@ const listaCiudades = datos.ciudades
  */
 
 router.get("/pokedex", getPokedex)
+router.post("/pokedex", addPokemon)
 
 /**
  * 

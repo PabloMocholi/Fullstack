@@ -7,3 +7,9 @@ export const getPokedex = (req,res)=>{
     res.setHeader("Content-Type", "application/json");
     res.send(jsonData)
 }
+
+export const addPokemon = (req, res) => {
+    console.log(req.body)
+
+
+}
