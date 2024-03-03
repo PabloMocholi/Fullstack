@@ -51,12 +51,11 @@ const Dnd = () => {
     return (
         <>
             <h4>Dnd Monster Data</h4>
+            
             <div className='displayMonster'>
                 <span className='nameMonster'>{infoM.name}</span>
                 {infoM.image ? <img className='imageMonster' src={`https://www.dnd5eapi.co${infoM.image}`} alt="" /> : <h4>No hay foto disponible</h4>}
-
-            </div>
-            <button onClick={() => {
+                <button onClick={() => {
                 console.log("ELEMENTOS", ArrayURLS.length)
                 if (contador < ArrayURLS.length - 1) {
                     setContador(contador + 1)
@@ -65,6 +64,9 @@ const Dnd = () => {
                     console.log("Ya no hay más monstruos en la lista.");
                 }
             }}>Siguiente</button>
+
+            </div>
+          
         </>
     );
 };

@@ -33,6 +33,11 @@ const Fakeshop = () => {
                             <div className='ExpositorPrendas-prenda'>
                                 <h5 className='ExpositorPrendas-prenda-nombre'>{prenda.title}</h5>
                                 <img className='ExpositorPrenda-prenda-imagen' src={prenda.image} alt="prenda" />
+                                <div className='ExpositorPrenda-prenda-rating'>
+                                    <img className='estrella' src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Estrella_amarilla.png/2048px-Estrella_amarilla.png" alt="" />
+                                    <span>{prenda.rating.rate}</span>
+                                </div>
+                               
 
                             </div>
 

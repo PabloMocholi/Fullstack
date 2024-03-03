@@ -22,11 +22,23 @@ const Pokemon = () => {
         cargarPokemon()
     }, [])
     return (<>
-        <img className="LogoPokemon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" alt="" />
-    
-        <h2>{pokemon.name}</h2>
-        <img src={pokemon.sprites.front_default} alt="" />
-       
+
+        <h4>Pokemon Encounter</h4>
+
+        <div className='Pokemon'>
+            <img className="LogoPokemon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png" alt="" />
+            <h2>{pokemon.name}</h2>
+            {pokemon.sprites && (
+                <>
+
+                    <img className='Pokemon-img' src={pokemon.sprites.front_default} alt="delante" />
+                    <img className='Pokemon-img' src={pokemon.sprites.back_default} alt="atrás" />
+
+                </>
+            )}
+        </div>
+
+
 
     </>)
 }

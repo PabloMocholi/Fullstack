@@ -31,9 +31,22 @@ const Users = () => {
                 users.map((u) => {
                     //console.log(u)
                     return (<>
-                        <div >
-                            <h5 >{u.name.first} {u.name.last}</h5>
-                            <img src={u.picture.large} alt="prenda" />
+                        <div className='User'>
+                            <div className='User-id'>
+                                <h5 className='User-name' >{u.name.first} {u.name.last}</h5>
+                                <img className='User-foto' src={u.picture.large} alt="foto_user" />
+                            </div>
+
+                            <div className='User-data'>
+                                <span className='User-data-nombre'>Ciudad:</span>
+                                <span>{u.location.city}</span>
+                                <span className='User-data-nombre'>Estado:</span>
+                                <span>{u.location.state}</span>
+                                <span className='User-data-nombre'>Usuario:</span>
+                                <span>{u.login.username}</span>
+                                <span className='User-data-nombre'>Teléfono:</span>
+                                <span>{u.phone}</span>
+                            </div>
 
                         </div>
                     </>)

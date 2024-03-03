@@ -12,7 +12,7 @@ const Games = () => {
             const response = await fetch(`https://api.rawg.io/api/games?key=e732598aa8c94ccf87896c320203c476`);
             const data = await response.json();
             setGames(data.results);
-           // console.log(data.results)
+            // console.log(data.results)
 
         } catch (error) {
             console.error(error);
@@ -27,13 +27,16 @@ const Games = () => {
 
     return (<>
         <h4>Game List</h4>
-        <div  className='DisplayGames'>
+        <div className='DisplayGames'>
             {
                 games.map((game) => {
                     return (<>
                         <div className='Game'>
+                            <div className='Difuminar'></div>
                             <h2 className='Game-name'>{game.name}</h2>
+
                             <img className='ImageGame' src={game.background_image} alt="" />
+
                         </div>
 
                     </>)

@@ -7,13 +7,29 @@
 .ExpositorPrendas-prenda{
     display: flex;
     flex-direction: column;
+    background-color: white;
+    padding: 40px;
+
 }
 
 .ExpositorPrendas-prenda-nombre{
-    height: 70px;
+    height: 100px;
+    font-size: 105%;
+    color: black;
 }
 
 .ExpositorPrenda-prenda-imagen{
     width: 200px;
     height: 200px;
+}
+
+.ExpositorPrenda-prenda-rating{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.estrella{
+    width: 40px;
 }

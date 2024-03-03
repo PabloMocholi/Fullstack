@@ -12,4 +12,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url("https://png.pngtree.com/background/20230605/original/pngtree-dungeon-with-large-dragons-near-it-on-fire-picture-image_2875224.jpg");
+    background-size: cover;
+    gap: 20px;
+    padding: 20px;
+}
+
+.DND-foto{
+    width: 100%;
 }

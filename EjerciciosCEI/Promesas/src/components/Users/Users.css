@@ -3,3 +3,34 @@
     overflow: scroll;
     gap: 20px;
 }
+.User{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 20px;
+    width: 320px;
+    flex-shrink: 0;
+    background-color: rgb(22, 29, 29);
+    color: white;
+}
+.User-id{
+    display: flex;
+    flex-direction: column;
+}
+.User-data{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex-grow: 1;
+}
+
+.User-data-nombre{
+    font-weight: bold;
+}
+
+.User-foto{
+    border-radius: 100px;
+}
