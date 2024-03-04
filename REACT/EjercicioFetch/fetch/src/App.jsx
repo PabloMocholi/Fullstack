@@ -14,7 +14,6 @@ function App() {
       fetchData()
     }, 2000)
 
-
   }, [])
 
 
@@ -23,7 +22,7 @@ function App() {
     try {
       let indicesRandom = []
 
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 10; i++) {
         indicesRandom.push(Math.floor(Math.random() * 800))
       }
 

@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import './Dnd.css'
 
 const Dnd = () => {
-    const [dnd, setDnd] = useState([]);
-    const [monstruo, setMonstruo] = useState("/api/monsters/aboleth");
-    const [infoM, setInfo] = useState([]);
-    const [ArrayURLS, setArrayURLS] = useState([]);
-    const [contador, setContador] = useState(0)
+    const [dnd, setDnd] = useState([]); //todo la API
+    const [monstruo, setMonstruo] = useState("/api/monsters/aboleth"); //primera por defecto
+    const [infoM, setInfo] = useState([]); //monstruo que se muestra
+    const [ArrayURLS, setArrayURLS] = useState([]); //guardo todas las urls de la API
+    const [contador, setContador] = useState(0) //contador para avanzar de mosntruo
 
     const cargarMonstruos = async () => {
         try {
