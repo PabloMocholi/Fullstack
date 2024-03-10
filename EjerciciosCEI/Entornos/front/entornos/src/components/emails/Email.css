@@ -1,0 +1,105 @@
+.Email{
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+
+    height: 300px;
+
+}
+
+.Email-div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.Email-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Email-remitente{
+    display: flex;
+    align-items: center;
+}
+
+.Email-initial{
+    width: 40px;
+    height: 40px;
+}
+
+.Email-p{
+
+
+    height: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    text-align: justify;
+}
+
+h2,h4,p{margin: 0;}
+
+/**/
+
+.Reply{
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    position: fixed;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%);
+    transition: top 2s;
+    border-radius: 20px;
+    border: 1px solid gray;
+}
+
+.is-active{
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    
+}
+
+.Reply-section{
+    border-bottom: 1px solid gray;
+    padding: 20px;
+    
+}
+
+.Reply-icon{
+    font-size: 160%;
+}
+
+.Reply-top{
+    display: flex;
+    justify-content: space-around;
+}
+.Reply-user{
+    display: flex;
+    justify-content: space-around;
+}
+.Reply-user-div{
+    flex-grow: 1;
+    display: flex;
+    align-self: start;
+    align-items: center;
+    gap:5px
+}
+
+.Reply-title{
+    text-align: left;
+}
+
+.Reply-content{
+    padding: 20px;
+    color: gray;
+    text-align: left;
+}
+
+.u-blue{color: dodgerblue;cursor: pointer;}

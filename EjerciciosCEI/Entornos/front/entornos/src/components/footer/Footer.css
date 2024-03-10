@@ -1,0 +1,19 @@
+.Footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.Footer-icon{
+    font-size: 160%;
+}
+
+.Footer-icon--blue{
+    color: blue;
+    
+}
+
+
+.Footer-icon--red{
+    color: red;
+}
