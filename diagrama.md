@@ -2,6 +2,7 @@
 
 # Estructura de las tablas
 
+```
 users [icon: user] {
     id int pk auto
     name string 
@@ -17,12 +18,14 @@ users [icon: user] {
 }
 
 followers{
+
   id int pk auto
   id_user int
   id_user_followed int
 }
 
 posts [icon: twitter] {
+
   id int pk auto
   content string
   retweets int
@@ -57,8 +60,11 @@ link_user_post [icon: link]{
   id_user int
   id_post int
 }
+```
 
 # Relaciones
+
+```
 users.id <> followers.id_user
 followers.id_user_followed <> users.id
 
@@ -74,7 +80,7 @@ comments.id_comment  > posts.id
 
 posts.id > likes.id_post_liked
 likes.id_user_like <> users.id
-
+```
 
 
 
