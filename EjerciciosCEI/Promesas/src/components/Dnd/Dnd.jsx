@@ -28,11 +28,17 @@ const Dnd = () => {
     };
 
     const carga1Monstruo = async () => {
-        console.log(monstruo)
-        const response = await fetch(`https://www.dnd5eapi.co${monstruo}`);
-        const data = await response.json();
-        setInfo(data);
-        console.log(data);
+        try {
+            console.log(monstruo)
+            const response = await fetch(`https://www.dnd5eapi.co${monstruo}`);
+            const data = await response.json();
+            setInfo(data);
+            console.log(data);
+
+        } catch (error) {
+            console.error(error);
+        }
+
     };
 
     useEffect(() => {
@@ -51,22 +57,22 @@ const Dnd = () => {
     return (
         <>
             <h4>Dnd Monster Data</h4>
-            
+
             <div className='displayMonster'>
                 <span className='nameMonster'>{infoM.name}</span>
                 {infoM.image ? <img className='imageMonster' src={`https://www.dnd5eapi.co${infoM.image}`} alt="" /> : <h4>No hay foto disponible</h4>}
                 <button onClick={() => {
-                console.log("ELEMENTOS", ArrayURLS.length)
-                if (contador < ArrayURLS.length - 1) {
-                    setContador(contador + 1)
+                    console.log("ELEMENTOS", ArrayURLS.length)
+                    if (contador < ArrayURLS.length - 1) {
+                        setContador(contador + 1)
 
-                } else {
-                    console.log("Ya no hay más monstruos en la lista.");
-                }
-            }}>Siguiente</button>
+                    } else {
+                        console.log("Ya no hay más monstruos en la lista.");
+                    }
+                }}>Siguiente</button>
 
             </div>
-          
+
         </>
     );
 };

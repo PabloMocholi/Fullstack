@@ -32,6 +32,8 @@ const Email = () => {
             .then(data => {
                 console.log(data)
                 setEmails(data)
+            }).catch(error =>{
+                console.log(error)
             })
             .finally(() => {
                 controller.abort();

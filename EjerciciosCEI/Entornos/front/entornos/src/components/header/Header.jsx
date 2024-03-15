@@ -25,6 +25,8 @@ const Header = () => {
             .then(data => {
                 console.log(data)
                 setInfo(data)
+            }).catch(error =>{
+                console.log(error)
             })
             .finally(() => {
                 controller.abort();

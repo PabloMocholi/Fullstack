@@ -12,10 +12,17 @@ app.use("/API/v1/", indexRouter)
 
 
 
-app.get("/", (req,res)=>{
-    res.send("MAIN API PAGE")
+app.get("/", (req, res) => {
+
+    try {
+        res.status(200).send("MAIN API PAGE")
+
+    } catch (error) {
+        res.status(500).send(error)
+    }
+
 })
 
-app.listen(PORT, ()=>{
+app.listen(PORT, () => {
     console.log("Server running")
 })
