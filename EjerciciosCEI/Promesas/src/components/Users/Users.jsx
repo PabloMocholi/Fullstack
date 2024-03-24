@@ -5,13 +5,14 @@ const Users = () => {
 
     const [users, setUser] = useState([])
     const { VITE_USERS } = import.meta.env
+    console.log("VITE",VITE_USERS)
 
     const cargarUsers = async () => {
         try {
-            const response = await fetch({VITE_USERS});
+            const response = await fetch(VITE_USERS);
             const data = await response.json();
             setUser(data.results);
-            //console.log(data)
+            console.log("USERS",data)
 
         } catch (error) {
             console.error(error);
