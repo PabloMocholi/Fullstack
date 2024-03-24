@@ -4,10 +4,11 @@ import './Users.css'
 const Users = () => {
 
     const [users, setUser] = useState([])
+    const { VITE_USERS } = import.meta.env
 
     const cargarUsers = async () => {
         try {
-            const response = await fetch(`https://randomuser.me/api/?results=10`);
+            const response = await fetch({VITE_USERS});
             const data = await response.json();
             setUser(data.results);
             //console.log(data)
